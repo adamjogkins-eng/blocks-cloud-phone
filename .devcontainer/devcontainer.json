@@ -1,0 +1,9 @@
+{
+  "name": "Cloud Phone Provider",
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+  },
+  "forwardPorts": [7860],
+  "postCreateCommand": "docker run -d --privileged -p 5555:5555 redroid/redroid:11.0.0-latest && npm install -g ws-scrcpy"
+}
